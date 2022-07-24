@@ -1,15 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import DogProfile from "./DogProfile";
+import Dogs from "./Dogs";
 
-import DogDetails from "./DogDeatails";
 
 
 function App() {
   return (
     <Routes>
-        <Route path="/dogs" element={<DogDetails />} />
-    </Routes>
-    
+    <Route path="/dogs" element={<Dogs />} />
+    <Route path="/dogs/:name" element={<DogProfile />} />
+</Routes>
   );
 }
 

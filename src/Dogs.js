@@ -1,8 +1,9 @@
 import React from "react";
+import DogProfile from "./DogProfile";
 import { Link } from "react-router-dom";
 
 
-const DogDetails = () => {
+const Dogs = () => {
 
 const dogs = [
     {
@@ -55,12 +56,13 @@ const dogs = [
             <h1>Click on a dog's name to see his profile</h1>
             <h2>
                 {dogs.map(d =>
-                    <Link to={`/dogs/${d.name}`}>{d.name}</Link>
+                    <Link to={`/dogs/${d.name.toLowerCase()}`}>{d.name}</Link>
                     )}
-            </h2>
 
+            </h2>
+                  {/* <h1> { dog }</h1> */}
         </div>
     );
     }
 
-    export default DogDetails;
+    export default Dogs;
